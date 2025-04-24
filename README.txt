@@ -10,7 +10,6 @@ $font-logo= ?
 $hook="raleway"
 $text="poppins"
 
-??Logo brand??
 
 ??warna website??
 
