@@ -17,10 +17,10 @@
     <title>E-Commerce Frontend Project</title>
   </head>
   <body class="dark:bg-zinc-900">
+    
     <!-- Navigation Bar (Flowbite Sticky Navigation Bar) -->
-
     <nav
-      class="fixed top-0 z-20 w-full bg-white border-b border-zinc-200 dark:bg-zinc-900 start-0 dark:border-zinc-600"
+      class="fixed top-0 w-full bg-white border-b z-[9999] border-zinc-200 dark:bg-zinc-900 start-0 dark:border-zinc-600"
     >
       <div
         class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto"
@@ -40,18 +40,19 @@
         >
           <button
             type="button"
-            class="text-white hover:cursor-pointer bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800 font-[Poppins]"
+            class="text-white hover:cursor-pointer bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-violet-600 dark:hover:bg-violet-900 transition dark:focus:ring-violet-800 font-[Poppins]"
           >
             Sign Up
           </button>
 
           <button
             type="button"
-            class="text-black hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg dark:border-white dark:text-white text-sm px-4 py-2 text-center border border-black dark:focus:ring-violet-800 font-[Poppins]"
+            class="text-black hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg dark:border-white hover:dark:bg-zinc-800 dark:text-white text-sm px-4 py-2 text-center border border-black dark:focus:ring-violet-800 font-[Poppins]"
           >
             Log In
           </button>
 
+          <!-- Favourite (Heart) Icon -->
           <a href="">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
@@ -72,6 +73,7 @@
             </svg>
           </a>
 
+          <!-- Cart Icon -->
           <a href="">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
@@ -158,30 +160,79 @@
       </div>
     </nav>
 
-    <div class="p-10 mt-10 ">
+    <!-- Hero Section -->
+    <div class="p-10 mt-10"> <!-- Padding to the Main Container, and also giving space from the navbar, because the navbar isn't a block element and the first container will just be placed behind it -->
       <div class="h-[450px] flex">
-        <div class="flex-1">
+        <div class="flex-1"> <!-- First Child for hero section, the list of products -->
           <div class="p-4">
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Monitors</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Graphics Cards</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Motherboards</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Processors</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Storage Disks</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Memory Cards</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Power Supply</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition">Storage Disks</a>   
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Monitors</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Graphics Cards</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Motherboards</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Processors</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Cooling Fan</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Memory Cards</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Power Supply</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-white hover:font-bold transition"
+              >Storage Disks</a
+            >
           </div>
-          <hr class="text-black dark:text-white">
+          <hr class="text-black dark:text-white" />
           <div class="p-4">
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition mt-2">Keyboards</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition">Mouses</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition">Headphones</a>
-            <a href="" class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition">Speakers</a>
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition mt-2"
+              >Keyboards</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition"
+              >Mouses</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition"
+              >Headphones</a
+            >
+            <a
+              href=""
+              class="block text-left font-[Inter] text-md leading-[2] dark:text-violet-300 text-violet-700 hover:font-bold transition"
+              >Speakers</a
+            >
           </div>
         </div>
         <div
           class="flex items-center justify-center border-l border-black dark:border-white flex-3"
-        >
+        > <!-- Second Child, the carousel for trending banners -->
           <div
             id="default-carousel"
             class="relative w-[90%]"
@@ -327,6 +378,528 @@
         </div>
       </div>
     </div>
+
+    <div class="p-14">
+      <div class="flex items-center gap-x-3">
+        <div class="rounded-lg w-[20px] bg-violet-700 h-[30px]"></div>
+        <h1 class="text-violet-500 dark:text-violet-300 font-[Inter]">
+          Today's
+        </h1>
+      </div>
+      <div class="flex items-center mt-4 space-y-2 gap-x-8">
+        <!-- Title -->
+        <h2 class="font-[Inter] text-4xl font-bold text-black dark:text-white">
+          Flash Sales
+        </h2>
+
+        <!-- Countdown Timer -->
+        <div class="flex items-end space-x-4 text-black dark:text-white">
+          <!-- Days -->
+          <div class="flex flex-col items-center">
+            <span id="days" class="text-3xl font-[Inter] font-semibold leading-none"
+              >03</span
+            >
+            <span class="text-[10px] mt-1">Days</span>
+          </div>
+          <span class="text-3xl font-[Inter] font-semibold leading-none text-violet-500"
+            >:</span
+          >
+
+          <!-- Hours -->
+          <div class="flex flex-col items-center">
+            <span id="hours" class="text-3xl font-[Inter] font-semibold leading-none"
+              >23</span
+            >
+            <span class="text-[10px] mt-1">Hours</span>
+          </div>
+          <span class="text-3xl font-[Inter] font-semibold leading-none text-violet-500"
+            >:</span
+          >
+
+          <!-- Minutes -->
+          <div class="flex flex-col items-center">
+            <span id="minutes" class="text-3xl font-semibold leading-none"
+              >19</span
+            >
+            <span class="text-[10px] mt-1">Minutes</span>
+          </div>
+          <span class="text-3xl font-semibold leading-none text-violet-500"
+            >:</span
+          >
+
+          <!-- Seconds -->
+          <div class="flex flex-col items-center">
+            <span id="seconds" class="text-3xl font-semibold leading-none"
+              >56</span
+            >
+            <span class="text-[10px] mt-1">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex mt-5 gap-x-3">
+        <div class="flex-col"> <!-- Card 1 -->
+          <div
+            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
+          >
+            <img
+              class="object-cover w-[70%] h-[70%]"
+              src="assets/images/Product/Video_card/nvidia/RTX 5090.png"
+            />
+            <h6
+              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
+            >
+              -25%
+            </h6>
+            <a class="absolute top-0 right-0 m-1" href="">
+              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+              </svg>
+            </a>
+            
+          </div>
+          <div class="flex-col mt-2 font-[Inter]">
+            <h1 class="font-bold dark:text-white">Nvidia RTX 5090</h1>
+            <div class="flex mt-1 gap-x-2">
+              <p class="text-violet-500 dark:text-violet-300">$500</p>
+              <s class="text-zinc-500">$650</s>
+            </div>
+            <div class="flex items-center mt-1 gap-x-2">
+              <div class="flex ml-[-5px]">
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="text-zinc-500">(50)</p>
+            </div>
+            <a class="block px-2 py-1 mt-2 text-sm text-white rounded-md w-fit bg-violet-700">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-col"> <!-- Card 2 -->
+          <div
+            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
+          >
+            <img
+              class="object-cover w-[70%] h-[70%]"
+              src="assets/images/Product/mouse/razer/Razer DeathAdder V3 Pro.png"
+            />
+            <h6
+              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
+            >
+              -15%
+            </h6>
+            <a class="absolute top-0 right-0 m-1" href="">
+              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+              </svg>
+            </a>
+            
+          </div>
+          <div class="flex-col mt-2 font-[Inter]">
+            <h1 class="font-bold dark:text-white">Razer DeathAdder V3 Pro</h1>
+            <div class="flex mt-1 gap-x-2">
+              <p class="text-violet-500 dark:text-violet-300">$200</p>
+              <s class="text-zinc-500">$245</s>
+            </div>
+            <div class="flex items-center mt-1 gap-x-2">
+              <div class="flex ml-[-5px]">
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="text-zinc-500">(124)</p>
+            </div>
+            <a class="block px-2 py-1 mt-2 text-sm text-white rounded-md w-fit bg-violet-700">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-col"> <!-- Card 3 -->
+          <div
+            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
+          >
+            <img
+              class="object-cover w-[70%] h-[70%]"
+              src="assets/images/Product/headphone/Sony/Sony INZONE H9.png"
+            />
+            <h6
+              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
+            >
+              -25%
+            </h6>
+            <a class="absolute top-0 right-0 m-1" href="">
+              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+              </svg>
+            </a>
+            
+          </div>
+          <div class="flex-col mt-2 font-[Inter]">
+            <h1 class="font-bold dark:text-white">Sony Inzone H9</h1>
+            <div class="flex mt-1 gap-x-2">
+              <p class="text-violet-500 dark:text-violet-300">$160</p>
+              <s class="text-zinc-500">$210</s>
+            </div>
+            <div class="flex items-center mt-1 gap-x-2">
+              <div class="flex ml-[-5px]">
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="text-zinc-500">(297)</p>
+            </div>
+            <a class="block px-2 py-1 mt-2 text-sm text-white rounded-md w-fit bg-violet-700">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-col"> <!-- Card 4 -->
+          <div
+            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
+          >
+            <img
+              class="object-cover w-[70%] h-[70%]"
+              src="assets/images/Product/processor/intel/core_9_285K.png"
+            />
+            <h6
+              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
+            >
+              -25%
+            </h6>
+            <a class="absolute top-0 right-0 m-1" href="">
+              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+              </svg>
+            </a>
+            
+          </div>
+          <div class="flex-col mt-2 font-[Inter]">
+            <h1 class="font-bold dark:text-white">Intel Core i9-285K</h1>
+            <div class="flex mt-1 gap-x-2">
+              <p class="text-violet-500 dark:text-violet-300">$250</p>
+              <s class="text-zinc-500">$280</s>
+            </div>
+            <div class="flex items-center mt-1 gap-x-2">
+              <div class="flex ml-[-5px]">
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="text-zinc-500">(187)</p>
+            </div>
+            <a class="block px-2 py-1 mt-2 text-sm text-white rounded-md w-fit bg-violet-700">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-col"> <!-- Card 5 -->
+          <div
+            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
+          >
+            <img
+              class="object-cover w-[70%] h-[70%]"
+              src="assets/images/Product/keyboard/keychron/Keychron Q1 Max.png"
+            />
+            <h6
+              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
+            >
+              -25%
+            </h6>
+            <a class="absolute top-0 right-0 m-1" href="">
+              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+              </svg>
+            </a>
+            
+          </div>
+          <div class="flex-col mt-2 font-[Inter]">
+            <h1 class="font-bold dark:text-white">Keychron Q1 Max</h1>
+            <div class="flex mt-1 gap-x-2">
+              <p class="text-violet-500 dark:text-violet-300">$350</p>
+              <s class="text-zinc-500">$400</s>
+            </div>
+            <div class="flex items-center mt-1 gap-x-2">
+              <div class="flex ml-[-5px]">
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300 ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="text-zinc-500">(76)</p>
+            </div>
+            <a class="block px-2 py-1 mt-2 text-sm text-white rounded-md w-fit bg-violet-700">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
     <!-- scripts -->
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
