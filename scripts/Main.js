@@ -15,6 +15,7 @@ document.addEventListener('alpine:init', () => {
         items: [],
         total: 0,
         quantity: 0,
+        saldo: 1000, // Misalnya saldo awal pengguna adalah $1000
 
         add(newItem) {
             const found = this.items.find(item => item.id === newItem.id);
@@ -64,11 +65,35 @@ document.addEventListener('alpine:init', () => {
             this.items = [];
             this.total = 0;
             this.quantity = 0;
+        },
+
+    });
+
+    Alpine.store('payment', {
+        saldo: 1000,
+        checkout() {
+            if (this.saldo >= Alpine.store('cart').total) {
+                this.saldo -= Alpine.store('cart').total;
+                Swal.fire({
+                    title: "Checkout Berhasil!",
+                    text: "Terima kasih sudah berbelanja!",
+                    icon: "success"
+                });
+                Alpine.store('cart').clear();
+            } else {
+                Swal.fire({
+                    title: "Saldo Tidak Cukup!",
+                    text: "Silakan tambah saldo Anda sebelum checkout.",
+                    icon: "error"
+                });
+            }
         }
     });
+    
+
 });
 
-// Optional: Open cart automatically after 3 seconds (your existing code)
+// Optional: Open cart automatically after 3 seconds
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         document.body.__x.$data.cartOpen = true;
