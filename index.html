@@ -105,7 +105,7 @@
       :class="{ 'translate-x-0': cartOpen, 'translate-x-full': !cartOpen }"
     >
       <!-- Header Cart -->
-      <div class="flex justify-between items-center p-4 border-b dark:border-zinc-600">
+      <div class="flex items-center justify-between p-4 border-b dark:border-zinc-600">
         <h2 class="text-xl font-semibold font-[Poppins] dark:text-white">Your Cart</h2>
         <button @click="cartOpen = false"
           class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">
@@ -118,19 +118,19 @@
         
         <!-- If Cart is Empty -->
         <template x-if="$store.cart.items.length === 0">
-          <div class="text-center text-gray-500 dark:text-gray-400 mt-10">
+          <div class="mt-10 text-center text-gray-500 dark:text-gray-400">
             <p>Your cart is empty 😔</p>
           </div>
         </template>
 
         <!-- If Cart has Items -->
         <template x-for="(item, index) in $store.cart.items" :key="index">
-          <div class="flex items-center justify-between border p-3 rounded-lg dark:border-zinc-700">
+          <div class="flex items-center justify-between p-3 border rounded-lg dark:border-zinc-700">
             <div class="flex items-center space-x-4 rtl:space-x-reverse">
               <img 
                 :src="`assets/images/Product/${item.type}/${item.brand}/${item.img}`" 
                 alt="Product Image" 
-                class="w-12 h-12 rounded object-cover"
+                class="object-cover w-12 h-12 rounded"
               >
               <div>
                 <h3 class="text-sm font-bold dark:text-white" x-text="item.name"></h3> 
@@ -160,7 +160,7 @@
         </h4>
 
         <!-- Checkout Button (optional) -->
-        <button class="w-full mt-4 px-4 py-2 text-white bg-violet-700 rounded hover:bg-violet-900">
+        <button class="w-full px-4 py-2 mt-4 text-white rounded bg-violet-700 hover:bg-violet-900">
           Checkout
         </button>
       </div>
@@ -396,374 +396,6 @@
             </a>
           </div>
         </div>
-        <!--
-       <div class="flex-col">  Card 2 
-          <div
-            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
-          >
-            <img
-              class="object-cover w-[70%] h-[70%]"
-              src="assets/images/Product/mouse/razer/Razer DeathAdder V3 Pro.png"
-            />
-            <h6
-              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
-            >
-              -15%
-            </h6>
-            <a class="absolute top-0 right-0 m-1" href="">
-              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
-              </svg>
-            </a>
-            
-          </div>
-          <div class="flex-col mt-2 font-[Inter]">
-            <h1 class="font-bold dark:text-white">Razer DeathAdder V3 Pro</h1>
-            <div class="flex mt-1 gap-x-2">
-              <p class="text-violet-500 dark:text-violet-300">$200</p>
-              <s class="text-zinc-500">$245</s>
-            </div>
-            <div class="flex items-center mt-1 gap-x-2">
-              <div class="flex ml-[-5px]">
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-              </div>
-              <p class="text-zinc-500">(124)</p>
-            </div>
-            <a href="/" class="block px-2 py-1 mt-2 text-sm text-white transition rounded-md hover:bg-violet-900 w-fit bg-violet-700">
-              Add to Cart
-            </a>
-          </div>
-        </div>
-
-        <div class="flex-col"> Card 3
-          <div
-            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
-          >
-            <img
-              class="object-cover w-[70%] h-[70%]"
-              src="assets/images/Product/headphone/Sony/Sony INZONE H9.png"
-            />
-            <h6
-              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
-            >
-              -25%
-            </h6>
-            <a class="absolute top-0 right-0 m-1" href="">
-              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
-              </svg>
-            </a>
-            
-          </div>
-          <div class="flex-col mt-2 font-[Inter]">
-            <h1 class="font-bold dark:text-white">Sony Inzone H9</h1>
-            <div class="flex mt-1 gap-x-2">
-              <p class="text-violet-500 dark:text-violet-300">$160</p>
-              <s class="text-zinc-500">$210</s>
-            </div>
-            <div class="flex items-center mt-1 gap-x-2">
-              <div class="flex ml-[-5px]">
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-              </div>
-              <p class="text-zinc-500">(297)</p>
-            </div>
-            <a href="/" class="block px-2 py-1 mt-2 text-sm text-white transition rounded-md hover:bg-violet-900 w-fit bg-violet-700">
-              Add to Cart
-            </a>
-          </div>
-        </div>
-
-        <div class="flex-col"> Card 4
-          <div
-            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
-          >
-            <img
-              class="object-cover w-[70%] h-[70%]"
-              src="assets/images/Product/processor/intel/core_9_285K.png"
-            />
-            <h6
-              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
-            >
-              -25%
-            </h6>
-            <a class="absolute top-0 right-0 m-1" href="">
-              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
-              </svg>
-            </a>
-            
-          </div>
-          <div class="flex-col mt-2 font-[Inter]">
-            <h1 class="font-bold dark:text-white">Intel Core i9-285K</h1>
-            <div class="flex mt-1 gap-x-2">
-              <p class="text-violet-500 dark:text-violet-300">$250</p>
-              <s class="text-zinc-500">$280</s>
-            </div>
-            <div class="flex items-center mt-1 gap-x-2">
-              <div class="flex ml-[-5px]">
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-              </div>
-              <p class="text-zinc-500">(187)</p>
-            </div>
-            <a href="/" class="block px-2 py-1 mt-2 text-sm text-white transition rounded-md hover:bg-violet-900 w-fit bg-violet-700">
-              Add to Cart
-            </a>
-          </div>
-        </div>
-
-        <div class="flex-col"> Card 5
-          <div
-            class="w-[220px] h-[220px] rounded-sm dark:bg-zinc-800 bg-zinc-200 relative flex justify-center items-center"
-          >
-            <img
-              class="object-cover w-[70%] h-[70%]"
-              src="assets/images/Product/keyboard/keychron/Keychron Q1 Max.png"
-            />
-            <h6
-              class="absolute top-0 left-0 px-2 py-1 m-1.5 font-[Inter] text-xs text-white rounded-sm bg-violet-800"
-            >
-              -25%
-            </h6>
-            <a class="absolute top-0 right-0 m-1" href="">
-              <svg class="w-6 h-6 text-black dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
-              </svg>
-            </a>
-            
-          </div>
-          <div class="flex-col mt-2 font-[Inter]">
-            <h1 class="font-bold dark:text-white">Keychron Q1 Max</h1>
-            <div class="flex mt-1 gap-x-2">
-              <p class="text-violet-500 dark:text-violet-300">$350</p>
-              <s class="text-zinc-500">$400</s>
-            </div>
-            <div class="flex items-center mt-1 gap-x-2">
-              <div class="flex ml-[-5px]">
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-                <svg
-                  class="w-4 h-4 text-gray-300 ms-1 dark:text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path
-                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                  />
-                </svg>
-              </div>
-              <p class="text-zinc-500">(76)</p>
-            </div>
-            <a href="/" class="block px-2 py-1 mt-2 text-sm text-white transition rounded-md hover:bg-violet-900 w-fit bg-violet-700">
-              Add to Cart
-            </a>
-          </div>
-        </div> -->
       </template>
     </div>
   </div>
@@ -810,6 +442,20 @@
         <img src="assets/images/Icons/keyboard.svg" class="h-18 dark:brightness-[0] dark:invert-[1]">
         <h3 class="font-[Inter] dark:text-white">Keyboards</h3>
       </div>
+    </div>
+  
+    <!-- Promotion Banner 1 -->
+    <div class="font-[Inter] mt-16 w-full h-[500px] bg-zinc-950 flex justify-center">
+      <div class="flex-col p-14 flex-5">
+        <p class="font-bold text-violet-400">Categories</p>
+        <h1 class="text-6xl leading-[1.25] text-white mt-5">Enchance Your Music Experience</h1>
+        <p class="text-justify text-zinc-400 font-extralight max-w-[90%] mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima totam ullam minus odio esse earum eaque aspernatur molestias laborum. Optio, hic ipsam molestias exercitationem temporibus numquam ullam laudantium eaque! Nam.</p>
+        <a href="" class="block py-3 mt-5 text-white rounded-lg w-fit px-7 bg-violet-700">Buy Now!</a>
+      </div> <!-- Texts, Timer, and Buttons -->
+      <div class="relative flex-4">
+        <div class="absolute z-0 w-full h-full bg-white rounded-full opacity-[15%] blur-2xl"></div>
+        <img class="relative z-10 scale-[1.2]" src="assets/images/Product/headphone/Razer/Razer BlackShark V2 Pro.png">
+      </div> <!-- Image and faded background behind it -->
     </div>
   </div>
 
