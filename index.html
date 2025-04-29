@@ -154,11 +154,11 @@
 
       <!-- Cart Footer (Total & Quantity) -->
       <div class="p-4 border-t dark:border-zinc-700">
-        <h1 class="text-xl pb-2 font-semibold dark:text-white" x-data="{saldo: '1000'}">
-          Balance: $ <span x-text="saldo"></span>
+        <h1 class="text-xl pb-2 font-semibold dark:text-white">
+          Balance : $ <span x-text="$store.payment.saldo.toFixed(2)"></span>
         </h1>
         <h3 class="text-lg font-bold dark:text-white">
-          Total: $<span x-text="$store.cart.total.toFixed(2)"></span>
+          Total: $ <span x-text="$store.cart.total.toFixed(2)"></span>
         </h3>
         <h4 class="text-sm text-gray-500 dark:text-gray-400">
           Items: <span x-text="$store.cart.quantity"></span>

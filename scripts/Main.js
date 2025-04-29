@@ -15,7 +15,6 @@ document.addEventListener('alpine:init', () => {
         items: [],
         total: 0,
         quantity: 0,
-        saldo: 1000, // Misalnya saldo awal pengguna adalah $1000
 
         add(newItem) {
             const found = this.items.find(item => item.id === newItem.id);
@@ -72,20 +71,32 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('payment', {
         saldo: 1000,
         checkout() {
-            if (this.saldo >= Alpine.store('cart').total) {
-                this.saldo -= Alpine.store('cart').total;
+            if (Alpine.store('cart').quantity === 0) {
                 Swal.fire({
-                    title: "Checkout Berhasil!",
-                    text: "Terima kasih sudah berbelanja!",
-                    icon: "success"
+                    title: "Keranjang Anda Kosong!",
+                    text: "Masukkan minimal satu barang sebelum checkout.",
+                    icon: "warning",
+                    theme: "dark"
                 });
-                Alpine.store('cart').clear();
-            } else {
+            } 
+            else if (this.saldo >= Alpine.store('cart').total) {
+                this.saldo -= Alpine.store('cart').total;
+        Swal.fire({
+            title: "Checkout Berhasil!",
+            text: "Pembayaran berhasil!",
+            icon: "success",
+            theme: "dark"
+        });
+        Alpine.store('cart').clear();
+    } 
+            else {
                 Swal.fire({
                     title: "Saldo Tidak Cukup!",
                     text: "Silakan tambah saldo Anda sebelum checkout.",
-                    icon: "error"
+                    icon: "error",
+                    theme:"dark"
                 });
+                Alpine.store('cart').clear();
             }
         }
     });
